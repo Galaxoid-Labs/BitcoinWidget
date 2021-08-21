@@ -8,20 +8,37 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+@main
+struct Widgets: WidgetBundle {
+   var body: some Widget {
+       MediumMarketWidget()
+   }
+}
+
+struct Widget_Previews: PreviewProvider {
+    static var previews: some View {
+        MediumMarketWidgetEntryView(entry: MarketWidgetDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date()))
+            .preferredColorScheme(.dark)
+            .previewContext(WidgetPreviewContext(family: .systemMedium))
+    }
+}
+
+// MARK: - Market Widgets
+
+struct MarketWidgetProvider: TimelineProvider {
     
-    func placeholder(in context: Context) -> MarketDataEntry {
-        MarketDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date())
+    func placeholder(in context: Context) -> MarketWidgetDataEntry {
+        MarketWidgetDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date())
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (MarketDataEntry) -> ()) {
+    func getSnapshot(in context: Context, completion: @escaping (MarketWidgetDataEntry) -> ()) {
         
         Task {
             await AppState.shared.loadAll()
             if let bitcoinPrice = AppState.shared.bitcoinPrice {
-                completion(MarketDataEntry(bitcoinPrice: bitcoinPrice, date: Date()))
+                completion(MarketWidgetDataEntry(bitcoinPrice: bitcoinPrice, date: Date()))
             } else {
-                completion(MarketDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date()))
+                completion(MarketWidgetDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date()))
             }
         }
 
@@ -34,20 +51,23 @@ struct Provider: TimelineProvider {
         
         Task {
             await CKManager.shared.fetchData()
-            let timeline = Timeline(entries: [MarketDataEntry(bitcoinPrice: AppState.shared.bitcoinPrice ?? BitcoinPrice.placeHolder(), date: currentDate)], policy: .after(refreshDate))
+            let timeline = Timeline(entries: [MarketWidgetDataEntry(bitcoinPrice: AppState.shared.bitcoinPrice ?? BitcoinPrice.placeHolder(), date: currentDate)], policy: .after(refreshDate))
             completion(timeline)
         }
 
     }
 }
 
-struct MarketDataEntry: TimelineEntry {
+struct MarketWidgetDataEntry: TimelineEntry {
     let bitcoinPrice: BitcoinPrice
     let date: Date
 }
 
-struct WidgetEntryView : View {
-    var entry: Provider.Entry
+// MARK: - Medium Market Widgets
+
+struct MediumMarketWidgetEntryView : View {
+    
+    var entry: MarketWidgetProvider.Entry
 
     var body: some View {
         
@@ -161,29 +181,15 @@ struct WidgetEntryView : View {
     }
 }
 
-@main
-struct Widgets: WidgetBundle {
-   var body: some Widget {
-       MediumMarketWidget()
-   }
-}
-
 struct MediumMarketWidget: SwiftUI.Widget {
     let kind: String = "Widget"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            WidgetEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: MarketWidgetProvider()) { entry in
+            MediumMarketWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("Market")
         .description("This widget displays the current market conditions for Bitcoin.")
         .supportedFamilies([.systemMedium])
-    }
-}
-
-struct Widget_Previews: PreviewProvider {
-    static var previews: some View {
-        WidgetEntryView(entry: MarketDataEntry(bitcoinPrice: BitcoinPrice.placeHolder(), date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
