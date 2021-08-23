@@ -33,6 +33,10 @@ struct BitcoinStats: Codable, Hashable, Identifiable {
     func formattedDifficulty() -> String {
         return Double(integerLiteral: difficulty).formatAbreviation()
     }
+    
+    static func placeHolder() -> BitcoinStats {
+        return BitcoinStats(id: "BitcoinStats", blockHeight: 0, blockSize: 0, difficulty: 0, hashRate: 0.0, updatedAt: .now, createdAt: .now, recordId: "BitcoinStats")
+    }
 }
 
 extension BitcoinStats {

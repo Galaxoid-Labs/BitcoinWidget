@@ -28,6 +28,12 @@ struct LightningStats: Codable, Hashable, Identifiable {
         return capacity.formatted(.number.precision(.fractionLength(0...2))) + " BTC"
     }
     
+    static func placeHolder() -> LightningStats {
+        return LightningStats(id: "LightningStats", numberOfNodes: 0, numberOfNewNodes: 0,
+                              numberOfChannels: 0, numberOfNewChannels: 0, capacity: 0.0,
+                              updatedAt: .now, createdAt: .now, recordId: "LightningStats")
+    }
+    
 }
 
 extension LightningStats {

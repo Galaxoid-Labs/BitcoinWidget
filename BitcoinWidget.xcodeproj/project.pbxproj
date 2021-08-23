@@ -35,6 +35,7 @@
 		475E291026D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291126D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291226D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
+		475E291426D3EFB2009A0F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
 		47CAC16426D0171300852AF4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEF926CB028B00A60BBC /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		47CAC16526D0171300852AF4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEFB26CB028B00A60BBC /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		47CAC16826D0171300852AF4 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CAC16726D0171300852AF4 /* Widget.swift */; };
@@ -357,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47CAC16A26D0171400852AF4 /* Assets.xcassets in Resources */,
+				475E291426D3EFB2009A0F37 /* Assets.xcassets in Resources */,
 				47CAC17426D0177C00852AF4 /* Digital7Mono-B1g5.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = iphoneos;
@@ -599,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = iphoneos;
@@ -634,7 +636,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = macosx;
@@ -667,7 +669,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = macosx;
@@ -694,7 +696,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -723,7 +725,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

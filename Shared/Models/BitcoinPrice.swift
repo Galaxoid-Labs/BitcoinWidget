@@ -56,7 +56,7 @@ struct BitcoinPrice: Codable, Hashable, Identifiable {
     
     static func placeHolder() -> BitcoinPrice {
         return BitcoinPrice(id: "usd", price: 0.0, marketCap: 0.0, totalVolume: 0.0,
-                            priceChange24: 0.0, priceChangePercent24: 0.0, circulatingSupply: 0.0,
+                            priceChange24: 0.0, priceChangePercent24: 100.0, circulatingSupply: 0.0,
                             allTimeHigh: 0.0, allTimeLow: 0.0, updatedAt: .now,
                             createdAt: .now, recordId: "usd")
     }
