@@ -36,11 +36,20 @@
 		475E291126D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291226D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291426D3EFB2009A0F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
+		475E291626D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
+		475E291726D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
+		475E291826D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
+		475E291A26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
+		475E291B26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
+		475E291C26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
+		475E291E26D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
+		475E291F26D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
+		475E292026D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
 		47CAC16426D0171300852AF4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEF926CB028B00A60BBC /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		47CAC16526D0171300852AF4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEFB26CB028B00A60BBC /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		47CAC16826D0171300852AF4 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CAC16726D0171300852AF4 /* Widget.swift */; };
 		47CAC16A26D0171400852AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47CAC16926D0171400852AF4 /* Assets.xcassets */; };
-		47CAC16E26D0171400852AF4 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47CAC16326D0171300852AF4 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		47CAC16E26D0171400852AF4 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 47CAC16326D0171300852AF4 /* WidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		47CAC17326D0174D00852AF4 /* EasyStash in Frameworks */ = {isa = PBXBuildFile; productRef = 47CAC17226D0174D00852AF4 /* EasyStash */; };
 		47CAC17426D0177C00852AF4 /* Digital7Mono-B1g5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 475ADEEE26CB021800A60BBC /* Digital7Mono-B1g5.ttf */; };
 		47CAC17526D0178800852AF4 /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2426CC757200A60BBC /* CKManager.swift */; };
@@ -98,6 +107,9 @@
 		475ADF3326CE807900A60BBC /* LightningStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningStats.swift; sourceTree = "<group>"; };
 		475E290D26D04584009A0F37 /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
 		475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCDBackgroundView.swift; sourceTree = "<group>"; };
+		475E291526D43720009A0F37 /* FourValuePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourValuePanelView.swift; sourceTree = "<group>"; };
+		475E291926D439DD009A0F37 /* LargeValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueView.swift; sourceTree = "<group>"; };
+		475E291D26D43AD0009A0F37 /* SmallValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallValueView.swift; sourceTree = "<group>"; };
 		47CAC16326D0171300852AF4 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CAC16726D0171300852AF4 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		47CAC16926D0171400852AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +213,9 @@
 			children = (
 				475ADED226CB01EE00A60BBC /* ContentView.swift */,
 				475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */,
+				475E291526D43720009A0F37 /* FourValuePanelView.swift */,
+				475E291926D439DD009A0F37 /* LargeValueView.swift */,
+				475E291D26D43AD0009A0F37 /* SmallValueView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,11 +385,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475E291E26D43AD0009A0F37 /* SmallValueView.swift in Sources */,
 				475ADEE126CB01F000A60BBC /* ContentView.swift in Sources */,
 				475ADEDF26CB01F000A60BBC /* BitcoinWidgetApp.swift in Sources */,
 				475ADF2526CC757200A60BBC /* CKManager.swift in Sources */,
 				475ADF3026CD8E6900A60BBC /* Extensions.swift in Sources */,
+				475E291A26D439DD009A0F37 /* LargeValueView.swift in Sources */,
 				475E291026D051D6009A0F37 /* LCDBackgroundView.swift in Sources */,
+				475E291626D43720009A0F37 /* FourValuePanelView.swift in Sources */,
 				475ADF1526CC142E00A60BBC /* BitcoinStats.swift in Sources */,
 				475ADF3426CE807900A60BBC /* LightningStats.swift in Sources */,
 				475ADF2126CC58E600A60BBC /* BitcoinPrice.swift in Sources */,
@@ -386,11 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475E291F26D43AD0009A0F37 /* SmallValueView.swift in Sources */,
 				475ADF1126CC123900A60BBC /* AppState.swift in Sources */,
 				475ADF2626CC757200A60BBC /* CKManager.swift in Sources */,
 				475ADF3526CE807900A60BBC /* LightningStats.swift in Sources */,
 				475ADEE226CB01F000A60BBC /* ContentView.swift in Sources */,
+				475E291B26D439DD009A0F37 /* LargeValueView.swift in Sources */,
 				475E291126D051D6009A0F37 /* LCDBackgroundView.swift in Sources */,
+				475E291726D43720009A0F37 /* FourValuePanelView.swift in Sources */,
 				475ADF1626CC142E00A60BBC /* BitcoinStats.swift in Sources */,
 				475ADEE026CB01F000A60BBC /* BitcoinWidgetApp.swift in Sources */,
 				475ADF2226CC58E600A60BBC /* BitcoinPrice.swift in Sources */,
@@ -404,10 +425,13 @@
 			files = (
 				475E291226D051D6009A0F37 /* LCDBackgroundView.swift in Sources */,
 				47CAC17626D0178800852AF4 /* AppState.swift in Sources */,
+				475E291C26D439DD009A0F37 /* LargeValueView.swift in Sources */,
 				47CAC16826D0171300852AF4 /* Widget.swift in Sources */,
+				475E292026D43AD0009A0F37 /* SmallValueView.swift in Sources */,
 				47CAC17926D017AB00852AF4 /* LightningStats.swift in Sources */,
 				47CAC17526D0178800852AF4 /* CKManager.swift in Sources */,
 				47CAC17A26D017AB00852AF4 /* BitcoinPrice.swift in Sources */,
+				475E291826D43720009A0F37 /* FourValuePanelView.swift in Sources */,
 				47CAC17826D017AB00852AF4 /* BitcoinStats.swift in Sources */,
 				47CAC17726D0178B00852AF4 /* Extensions.swift in Sources */,
 			);
@@ -418,6 +442,7 @@
 /* Begin PBXTargetDependency section */
 		47CAC16D26D0171400852AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 47CAC16226D0171300852AF4 /* WidgetExtension */;
 			targetProxy = 47CAC16C26D0171400852AF4 /* PBXContainerItemProxy */;
 		};
@@ -548,12 +573,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BitcoinWidget--iOS--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BASIO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -569,6 +595,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -584,12 +611,13 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BitcoinWidget--iOS--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = BASIO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -605,6 +633,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BitcoinWidget;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,7 +650,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (macOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -654,7 +683,7 @@
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (macOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -685,7 +714,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
@@ -701,6 +730,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -714,7 +744,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
@@ -730,6 +760,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

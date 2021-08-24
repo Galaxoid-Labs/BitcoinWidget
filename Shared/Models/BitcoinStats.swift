@@ -23,6 +23,10 @@ struct BitcoinStats: Codable, Hashable, Identifiable {
     let recordId: String
     static let recordType: String = "BitcoinStats"
     
+    func formattedBlockHeight() -> String {
+        return blockHeight.formatted()
+    }
+    
     func formattedBlockSize() -> String {
         return ByteCountFormatter.string(fromByteCount: (blockSize*8)/1024, countStyle: .file) // ??? not sure if this is the right calc
     }

@@ -80,123 +80,19 @@ struct MediumMarketWidgetEntryView : View {
     var entry: MarketWidgetProvider.Entry
 
     var body: some View {
-        
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text(entry.bitcoinPrice.formattedPrice())
-                    .font(Font.custom("Digital-7Mono", size: 64))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("BTC-\(entry.bitcoinPrice.id.uppercased())")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
+
+        FourValuePanelView(mainView: LargeValueView(value: entry.bitcoinPrice.formattedPrice(),
+                                                    label: "BTC-\(entry.bitcoinPrice.id.uppercased())"),
+                           leftView: SmallValueView(value: entry.bitcoinPrice.formattedMarketCapAbv(currencyCode: entry.bitcoinPrice.id),
+                                                    label: "MARKET CAP"),
+                           middleView: SmallValueView(value: entry.bitcoinPrice.formattedVolumeAbv(currencyCode: entry.bitcoinPrice.id),
+                                                      label: "TOTAL VOLUME"),
+                           rightView: SmallValueView(value: entry.bitcoinPrice.formattedPricePercentChange24(),
+                                                     label: "PRICE CHANGE"))
+            .frame(maxHeight: .infinity)
+            .background {
+                LCDBackgroundView(clipPadding: 0)
             }
-            .lineLimit(1)
-            .minimumScaleFactor(0.5)
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text(entry.bitcoinPrice.formattedMarketCapAbv(currencyCode: entry.bitcoinPrice.id))
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("MARKET CAP")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text(entry.bitcoinPrice.formattedVolumeAbv(currencyCode: entry.bitcoinPrice.id))
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("TOTAL VOLUME")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    HStack {
-                        Text(entry.bitcoinPrice.formattedPricePercentChange24())
-                            .font(Font.custom("Digital-7Mono", size: 22))
-                            .tracking(1)
-                            .foregroundColor(.black)
-                            .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                        Image(systemName: entry.bitcoinPrice.isUp ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill")
-                            .foregroundColor(.black)
-                            .font(.system(size: 10))
-                            .offset(x: 0, y: -1)
-                            .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    }
-                    Text("PRICE CHANGE")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 16)
-            
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .padding(.horizontal, 16)
-        .frame(maxHeight: .infinity)
-        .background {
-            ZStack {
-                ZStack(alignment: .top) {
-                    Rectangle()
-                        .fill(Color("LCD"))
-                    Rectangle()
-                        .frame(height: 16)
-                        .offset(x: 0, y: -16)
-                        .shadow(color: Color.gray, radius: 2, x: 0, y: 6)
-                }
-            }
-        }
         
     }
 }
@@ -262,116 +158,19 @@ struct MediumBitcoinNetworkWidgetEntryView : View {
 
     var body: some View {
         
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text("\(entry.bitcoinStats.blockHeight)")
-                    .font(Font.custom("Digital-7Mono", size: 64))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("BLOCK HEIGHT")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-            }
-            .lineLimit(1)
-            .minimumScaleFactor(0.5)
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text(entry.bitcoinStats.formattedBlockSize())
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("BLOCK SIZE")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
+        FourValuePanelView(mainView: LargeValueView(value: entry.bitcoinStats.formattedBlockHeight(),
+                                                    label: "BLOCK HEIGHT"),
+                           leftView: SmallValueView(value: entry.bitcoinStats.formattedBlockSize(),
+                                                    label: "BLOCK SIZE"),
+                           middleView: SmallValueView(value: entry.bitcoinStats.formattedHashRate(),
+                                                      label: "TH/s"),
+                           rightView: SmallValueView(value: entry.bitcoinStats.formattedDifficulty(),
+                                                     label: "DIFFICULTY"))
+                .frame(maxHeight: .infinity)
+                .background {
+                    LCDBackgroundView(clipPadding: 0)
                 }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                
-                VStack(spacing: 4) {
-                    Text(entry.bitcoinStats.formattedHashRate())
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("TH/s")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text(entry.bitcoinStats.formattedDifficulty())
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("DIFFICULTY")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 16)
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .padding(.horizontal, 16)
-        .frame(maxHeight: .infinity)
-        .background {
-            ZStack {
-                ZStack(alignment: .top) {
-                    Rectangle()
-                        .fill(Color("LCD"))
-                    Rectangle()
-                        .frame(height: 16)
-                        .offset(x: 0, y: -16)
-                        .shadow(color: Color.gray, radius: 2, x: 0, y: 6)
-                }
-            }
-        }
-        
+
     }
 }
 
@@ -436,116 +235,18 @@ struct MediumLightningNetworkWidgetEntryView : View {
 
     var body: some View {
         
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text(entry.lightningStats.formattedCapcity())
-                    .font(Font.custom("Digital-7Mono", size: 56))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("NETWORK CAPACITY")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
+        FourValuePanelView(mainView: LargeValueView(value: entry.lightningStats.formattedCapcity(),
+                                                    label: "CAPACITY IN BTC"),
+                           leftView: SmallValueView(value: "\(entry.lightningStats.numberOfChannels)",
+                                                    label: "CHANNELS"),
+                           middleView: SmallValueView(value: "\(entry.lightningStats.numberOfNodes)",
+                                                      label: "NODES"),
+                           rightView: SmallValueView(value: "\(entry.lightningStats.numberOfNewNodes)",
+                                                     label: "NEW NODES"))
+            .frame(maxHeight: .infinity)
+            .background {
+                LCDBackgroundView(clipPadding: 0)
             }
-            .lineLimit(1)
-            .minimumScaleFactor(0.5)
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text("\(entry.lightningStats.numberOfChannels)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("CHANNELS")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                
-                VStack(spacing: 4) {
-                    Text("\(entry.lightningStats.numberOfNodes)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("NODES")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text("\(entry.lightningStats.numberOfNewNodes)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("NEW NODES")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 16)
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .padding(.horizontal, 16)
-        .frame(maxHeight: .infinity)
-        .background {
-            ZStack {
-                ZStack(alignment: .top) {
-                    Rectangle()
-                        .fill(Color("LCD"))
-                    Rectangle()
-                        .frame(height: 16)
-                        .offset(x: 0, y: -16)
-                        .shadow(color: Color.gray, radius: 2, x: 0, y: 6)
-                }
-            }
-            
-        }
         
     }
 }

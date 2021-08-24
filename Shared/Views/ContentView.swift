@@ -18,7 +18,7 @@ struct ContentView: View {
             Color("Background")
                 .edgesIgnoringSafeArea(.all)
             
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 
                 VStack(spacing: 8) {
                     
@@ -30,15 +30,35 @@ struct ContentView: View {
                                systemImageColor: appState.bitcoinPrice?.isUp ?? true ? .green : .red,
                                verticallyFlipImage: !(appState.bitcoinPrice?.isUp ?? true))
                     
-                    MarketStatsView()
-                        .padding(.bottom, 16)
+                    FourValuePanelView(mainView: LargeValueView(value: appState.bitcoinPrice?.formattedPrice() ?? "$45,000",
+                                                                label: "BTC-\(appState.currencyCode.uppercased())"),
+                                       leftView: SmallValueView(value: appState.bitcoinPrice?.formattedMarketCapAbv(currencyCode: appState.currencyCode) ?? "$857.2B",
+                                                                label: "MARKET CAP"),
+                                       middleView: SmallValueView(value: appState.bitcoinPrice?.formattedVolumeAbv(currencyCode: appState.currencyCode) ?? "$36.9B",
+                                                                  label: "TOTAL VOLUME"),
+                                       rightView: SmallValueView(value: appState.bitcoinPrice?.formattedPricePercentChange24() ?? "0.00%",
+                                                                 label: "PRICE CHANGE"))
+                            .background {
+                                LCDBackgroundView(clipPadding: 8)
+                            }
+                            .padding(.bottom, 16)
                     
                     HeaderView(color: .blue, title: "BITCOIN NETWORK",
                                systemImageName: "network",
                                systemImageColor: .gray,
                                verticallyFlipImage: false)
                     
-                    ChainStatsView()
+                    FourValuePanelView(mainView: LargeValueView(value: appState.bitcoinStats?.formattedBlockHeight() ?? "650,321",
+                                                                label: "BLOCK HEIGHT"),
+                                       leftView: SmallValueView(value: appState.bitcoinStats?.formattedBlockSize() ?? "0.72 MB",
+                                                                label: "BLOCK SIZE"),
+                                       middleView: SmallValueView(value: appState.bitcoinStats?.formattedHashRate() ?? "130.0 M",
+                                                                  label: "TH/s"),
+                                       rightView: SmallValueView(value: appState.bitcoinStats?.formattedDifficulty() ?? "130.0 M",
+                                                                 label: "DIFFICULTY"))
+                        .background {
+                            LCDBackgroundView(clipPadding: 8)
+                        }
                         .padding(.bottom, 16)
                     
                     HeaderView(color: .blue, title: "LIGHTNING NETWORK",
@@ -46,7 +66,17 @@ struct ContentView: View {
                                systemImageColor: .yellow,
                                verticallyFlipImage: false)
                     
-                    LightningStatsView()
+                    FourValuePanelView(mainView: LargeValueView(value: appState.lightningStats?.formattedCapcity() ?? "2,000",
+                                                                label: "CAPACITY IN BTC"),
+                                       leftView: SmallValueView(value: "\(appState.lightningStats?.numberOfChannels ?? 0)",
+                                                                label: "CHANNELS"),
+                                       middleView: SmallValueView(value: "\(appState.lightningStats?.numberOfNodes ?? 0)",
+                                                                  label: "NODES"),
+                                       rightView: SmallValueView(value: "\(appState.lightningStats?.numberOfNewNodes ?? 0)",
+                                                                 label: "NEW NODES"))
+                        .background {
+                            LCDBackgroundView(clipPadding: 8)
+                        }
                         .padding(.bottom, 16)
                     
                 }
@@ -57,113 +87,6 @@ struct ContentView: View {
             
         }
         .preferredColorScheme(.dark)
-        
-    }
-}
-
-struct MarketStatsView: View {
-    
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text(appState.bitcoinPrice?.formattedPrice() ?? "$44,342")
-                    .font(Font.custom("Digital-7Mono", size: 64))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("BTC-\(appState.currencyCode.uppercased())")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-            }
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .padding(.horizontal, 16)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text(appState.bitcoinPrice?.formattedMarketCapAbv(currencyCode: appState.currencyCode) ?? "$857.2B")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("MARKET CAP")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text(appState.bitcoinPrice?.formattedVolumeAbv(currencyCode: appState.currencyCode) ?? "$36.9B")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("TOTAL VOLUME")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    HStack {
-                        Text(appState.bitcoinPrice?.formattedPricePercentChange24() ?? "0.00%")
-                            .font(Font.custom("Digital-7Mono", size: 22))
-                            .tracking(1)
-                            .foregroundColor(.black)
-                            .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                        Image(systemName: (appState.bitcoinPrice?.isUp ?? true) ? "arrowtriangle.up.fill" : "arrowtriangle.down.fill")
-                            .foregroundColor(.black)
-                            .font(.system(size: 10))
-                            .offset(x: 0, y: -1)
-                            .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    }
-                    Text("PRICE CHANGE")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 32)
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .background {
-            LCDBackgroundView()
-        }
         
     }
 }
@@ -180,7 +103,7 @@ struct MainHeaderView: View {
                 
                 Text("BASIO")
                     .foregroundColor(.white)
-                    .font(.largeTitle)
+                    .font(.system(size: UIDevice.isIPad ? 42 : 32))
                     .fontWeight(.black)
                 Spacer()
                 
@@ -191,7 +114,7 @@ struct MainHeaderView: View {
                         Image(systemName: "arrowtriangle.left.fill")
                             .foregroundColor(.orange)
                     }
-                    .font(.subheadline)
+                    .font(.system(size: UIDevice.isIPad ? 22 : 15))
                     
                     Text("BITCOIN SPY") { string in
                         string.foregroundColor = .gray
@@ -199,7 +122,7 @@ struct MainHeaderView: View {
                             string[range].foregroundColor = .gray
                         }
                     }
-                    .font(.body)
+                    .font(.system(size: UIDevice.isIPad ? 24 : 17))
                     .fontWeight(.heavy)
                     .padding(.leading, 4)
                     
@@ -227,17 +150,18 @@ struct HeaderView: View {
             
             Rectangle()
                 .fill(color)
-                .frame(height: 3)
+                .frame(height: UIDevice.isIPad ? 3 : 3)
             
             HStack {
                 Image(systemName: systemImageName)
                     .foregroundColor(systemImageColor)
                     .scaleEffect(CGSize(width: 1.0, height: verticallyFlipImage ? -1.0 : 1.0))
+                    .font(.system(size: UIDevice.isIPad ? 24 : 18))
                 
                 Spacer()
                 Text(title)
                     .foregroundColor(.brown)
-                    .font(.caption)
+                    .font(.system(size: UIDevice.isIPad ? 19 : 12))
                     .fontWeight(.bold)
             }
             
@@ -247,207 +171,6 @@ struct HeaderView: View {
     
 }
 
-struct ChainStatsView: View {
-    
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text("\(appState.bitcoinStats?.blockHeight ?? 650321)")
-                    .font(Font.custom("Digital-7Mono", size: 64))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("BLOCK HEIGHT")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-            }
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .padding(.horizontal, 16)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text(appState.bitcoinStats?.formattedBlockSize() ?? "0.72 MB")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("BLOCK SIZE")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                
-                VStack(spacing: 4) {
-                    Text(appState.bitcoinStats?.formattedHashRate() ?? "130.0 M")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("TH/s")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text(appState.bitcoinStats?.formattedDifficulty() ?? "130.0 M")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("DIFFICULTY")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 32)
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .background {
-            LCDBackgroundView()
-        }
-        
-    }
-}
-
-struct LightningStatsView: View {
-    
-    @EnvironmentObject var appState: AppState
-    
-    var body: some View {
-        
-        LazyVStack(spacing: 8) {
-            
-            VStack {
-                Text(appState.lightningStats?.formattedCapcity() ?? "2,000 BTC")
-                    .font(Font.custom("Digital-7Mono", size: 48))
-                    .foregroundColor(.black)
-                    .frame(maxHeight: .infinity)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                Text("NETWORK CAPACITY")
-                    .font(Font.custom("Digital-7Mono", size: 12))
-                    .tracking(1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-            }
-            
-            Rectangle()
-                .frame(height: 1)
-                .foregroundColor(.black)
-                .padding(.horizontal, 16)
-                .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-            
-            HStack {
-                
-                VStack(spacing: 4) {
-                    Text("\(appState.lightningStats?.numberOfChannels ?? 0)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("CHANNELS")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                
-                VStack(spacing: 4) {
-                    Text("\(appState.lightningStats?.numberOfNodes ?? 0)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("NODES")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(width: 1)
-                    .foregroundColor(.black)
-                    .shadow(color: Color.gray, radius: 1, x: 0, y: 2)
-                
-                Spacer()
-                
-                VStack(spacing: 4) {
-                    Text("\(appState.lightningStats?.numberOfNewNodes ?? 0)")
-                        .font(Font.custom("Digital-7Mono", size: 22))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                    Text("NEW NODES")
-                        .font(Font.custom("Digital-7Mono", size: 12))
-                        .tracking(1)
-                        .foregroundColor(.black)
-                        .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
-                }
-                
-            }
-            .multilineTextAlignment(.center)
-            .padding(.top, 4)
-            .padding(.horizontal, 32)
-        }
-        .padding(.top, 18)
-        .padding(.bottom, 14)
-        .background {
-            LCDBackgroundView()
-        }
-        
-    }
-}
 
 // MARK: - Previews
 
