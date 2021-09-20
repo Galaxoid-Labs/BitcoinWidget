@@ -27,43 +27,48 @@ struct SettingsView: View {
                             Image("blockchain.com-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                            Text("Blockchain.com")
+                                .frame(width: 20, height: 20)
+                            Text("[blockchain.com](https://www.blockchain.com/api)")
                         }
-                        .frame(height: 44)
                         
                         HStack {
                             Image("coingecko-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
-                            Text("Coingecko.com")
+                                .frame(width: 20, height: 20)
+                            Text("[coingecko.com](https://www.coingecko.com/en/api)")
                         }
-                        .frame(height: 44)
                     }
                     
                     Section("Support & Suggestions") {
-                        Text("[basio@galaxoidlabs.com](mailto:basio@galaxoidlabs.com)")
+                        HStack {
+                            Image(systemName: "envelope.fill")
+                            Text("[basio@galaxoidlabs.com](mailto:basio@galaxoidlabs.com)")
+                        }
+                        HStack {
+                            Image(systemName: "network")
+                            Text("[galaxoidlabs.com/basio](https://galaxoidlabs.com/basio)")
+                        }
                     }
 
-                    LazyVStack(alignment: .center) {
-                        Image("donate")
-                            .resizable()
-                            .frame(width: 101, height: 128)
-                            .padding()
-                            .background()
-                            .cornerRadius(8)
-                    }
-                    .padding()
-                    .onTapGesture {
-                        donate()
-                    }
+//                    LazyVStack(alignment: .center) {
+//                        Image("donate")
+//                            .resizable()
+//                            .frame(width: 101, height: 128)
+//                            .padding()
+//                            .background()
+//                            .cornerRadius(8)
+//                    }
+//                    .padding()
+//                    .onTapGesture {
+//                        donate()
+//                    }
                     
-                    Text("In accordance with the [AppStore Guidelines, section 3.2.1 (vii)](https://developer.apple.com/app-store/review/guidelines/#acceptable) it should be noted that 100% of any donation made will be received by Galaxoid Labs to help make our products better and that the sender will not receive anything in return except for gratitude and thanks!")
-                        .font(.caption.italic())
-                        .foregroundColor(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.vertical)
+//                    Text("In accordance with the [AppStore Guidelines, section 3.2.1 (vii)](https://developer.apple.com/app-store/review/guidelines/#acceptable) it should be noted that 100% of any donation made will be received by Galaxoid Labs to help make our products better and that the sender will not receive anything in return except for gratitude and thanks!")
+//                        .font(.caption.italic())
+//                        .foregroundColor(.secondary)
+//                        .fixedSize(horizontal: false, vertical: true)
+//                        .padding(.vertical)
                     
                     
                 }
@@ -80,6 +85,13 @@ struct SettingsView: View {
     }
     
     func donate() {
+        guard let url = URL(string: "bitcoin:bc1qgdjnwm3k3fhhndqknw8wqnykvsx4ag5nnnn3rj") else {
+            return
+        }
+        openURL(url)
+    }
+    
+    func website() {
         guard let url = URL(string: "bitcoin:bc1qgdjnwm3k3fhhndqknw8wqnykvsx4ag5nnnn3rj") else {
             return
         }

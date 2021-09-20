@@ -8,42 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		475ADEDF26CB01F000A60BBC /* BitcoinWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADED126CB01EE00A60BBC /* BitcoinWidgetApp.swift */; };
-		475ADEE026CB01F000A60BBC /* BitcoinWidgetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADED126CB01EE00A60BBC /* BitcoinWidgetApp.swift */; };
 		475ADEE126CB01F000A60BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADED226CB01EE00A60BBC /* ContentView.swift */; };
-		475ADEE226CB01F000A60BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADED226CB01EE00A60BBC /* ContentView.swift */; };
 		475ADEE326CB01F000A60BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
-		475ADEE426CB01F000A60BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
 		475ADEEF26CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 475ADEEE26CB021800A60BBC /* Digital7Mono-B1g5.ttf */; };
-		475ADEF026CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 475ADEEE26CB021800A60BBC /* Digital7Mono-B1g5.ttf */; };
 		475ADF1026CC123900A60BBC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF0F26CC123900A60BBC /* AppState.swift */; };
-		475ADF1126CC123900A60BBC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF0F26CC123900A60BBC /* AppState.swift */; };
 		475ADF1526CC142E00A60BBC /* BitcoinStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF1426CC142E00A60BBC /* BitcoinStats.swift */; };
-		475ADF1626CC142E00A60BBC /* BitcoinStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF1426CC142E00A60BBC /* BitcoinStats.swift */; };
 		475ADF1A26CC1D7B00A60BBC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADF1926CC1D7B00A60BBC /* CloudKit.framework */; };
-		475ADF1D26CC1DE000A60BBC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADF1C26CC1DE000A60BBC /* CloudKit.framework */; };
 		475ADF2126CC58E600A60BBC /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2026CC58E600A60BBC /* BitcoinPrice.swift */; };
-		475ADF2226CC58E600A60BBC /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2026CC58E600A60BBC /* BitcoinPrice.swift */; };
 		475ADF2526CC757200A60BBC /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2426CC757200A60BBC /* CKManager.swift */; };
-		475ADF2626CC757200A60BBC /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2426CC757200A60BBC /* CKManager.swift */; };
 		475ADF2A26CC7A2000A60BBC /* EasyStash in Frameworks */ = {isa = PBXBuildFile; productRef = 475ADF2926CC7A2000A60BBC /* EasyStash */; };
-		475ADF2C26CC7A8800A60BBC /* EasyStash in Frameworks */ = {isa = PBXBuildFile; productRef = 475ADF2B26CC7A8800A60BBC /* EasyStash */; };
 		475ADF3026CD8E6900A60BBC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2F26CD8E6900A60BBC /* Extensions.swift */; };
-		475ADF3126CD8E6900A60BBC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2F26CD8E6900A60BBC /* Extensions.swift */; };
 		475ADF3426CE807900A60BBC /* LightningStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF3326CE807900A60BBC /* LightningStats.swift */; };
-		475ADF3526CE807900A60BBC /* LightningStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF3326CE807900A60BBC /* LightningStats.swift */; };
 		475E290E26D0504C009A0F37 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADF1926CC1D7B00A60BBC /* CloudKit.framework */; };
 		475E291026D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
-		475E291126D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291226D051D6009A0F37 /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
 		475E291426D3EFB2009A0F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
 		475E291626D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
-		475E291726D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
 		475E291826D43720009A0F37 /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
 		475E291A26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
-		475E291B26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
 		475E291C26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
 		475E291E26D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
-		475E291F26D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
 		475E292026D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
 		47CAC16426D0171300852AF4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEF926CB028B00A60BBC /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		47CAC16526D0171300852AF4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEFB26CB028B00A60BBC /* SwiftUI.framework */; platformFilter = maccatalyst; };
@@ -59,7 +43,6 @@
 		47CAC17926D017AB00852AF4 /* LightningStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF3326CE807900A60BBC /* LightningStats.swift */; };
 		47CAC17A26D017AB00852AF4 /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2026CC58E600A60BBC /* BitcoinPrice.swift */; };
 		47D13E6926F8C13000A37C8E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13E6826F8C13000A37C8E /* SettingsView.swift */; };
-		47D13E6A26F8C13000A37C8E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13E6826F8C13000A37C8E /* SettingsView.swift */; };
 		47D13E6B26F8C13000A37C8E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13E6826F8C13000A37C8E /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,17 +75,14 @@
 		475ADED226CB01EE00A60BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		475ADED326CB01F000A60BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475ADED826CB01F000A60BBC /* BASIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		475ADEDE26CB01F000A60BBC /* BASIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475ADEEE26CB021800A60BBC /* Digital7Mono-B1g5.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Digital7Mono-B1g5.ttf"; sourceTree = "<group>"; };
 		475ADEF126CB023F00A60BBC /* BitcoinWidget--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BitcoinWidget--iOS--Info.plist"; sourceTree = "<group>"; };
-		475ADEF226CB025200A60BBC /* BitcoinWidget--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "BitcoinWidget--macOS--Info.plist"; sourceTree = "<group>"; };
 		475ADEF926CB028B00A60BBC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		475ADEFB26CB028B00A60BBC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		475ADF0F26CC123900A60BBC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		475ADF1426CC142E00A60BBC /* BitcoinStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinStats.swift; sourceTree = "<group>"; };
 		475ADF1826CC1D5B00A60BBC /* BitcoinWidget (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BitcoinWidget (iOS).entitlements"; sourceTree = "<group>"; };
 		475ADF1926CC1D7B00A60BBC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
-		475ADF1B26CC1DDA00A60BBC /* BitcoinWidget (macOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BitcoinWidget (macOS).entitlements"; sourceTree = "<group>"; };
 		475ADF1C26CC1DE000A60BBC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		475ADF2026CC58E600A60BBC /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		475ADF2426CC757200A60BBC /* CKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKManager.swift; sourceTree = "<group>"; };
@@ -130,15 +110,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		475ADEDB26CB01F000A60BBC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				475ADF2C26CC7A8800A60BBC /* EasyStash in Frameworks */,
-				475ADF1D26CC1DE000A60BBC /* CloudKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		47CAC16026D0171300852AF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,9 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				475E290D26D04584009A0F37 /* WidgetExtension.entitlements */,
-				475ADF1B26CC1DDA00A60BBC /* BitcoinWidget (macOS).entitlements */,
 				475ADF1826CC1D5B00A60BBC /* BitcoinWidget (iOS).entitlements */,
-				475ADEF226CB025200A60BBC /* BitcoinWidget--macOS--Info.plist */,
 				475ADEF126CB023F00A60BBC /* BitcoinWidget--iOS--Info.plist */,
 				475ADED026CB01EE00A60BBC /* Shared */,
 				47CAC16626D0171300852AF4 /* Widget */,
@@ -187,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				475ADED826CB01F000A60BBC /* BASIO.app */,
-				475ADEDE26CB01F000A60BBC /* BASIO.app */,
 				47CAC16326D0171300852AF4 /* WidgetExtension.appex */,
 			);
 			name = Products;
@@ -270,26 +238,6 @@
 			productReference = 475ADED826CB01F000A60BBC /* BASIO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		475ADEDD26CB01F000A60BBC /* BitcoinWidget (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 475ADEEA26CB01F000A60BBC /* Build configuration list for PBXNativeTarget "BitcoinWidget (macOS)" */;
-			buildPhases = (
-				475ADEDA26CB01F000A60BBC /* Sources */,
-				475ADEDB26CB01F000A60BBC /* Frameworks */,
-				475ADEDC26CB01F000A60BBC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BitcoinWidget (macOS)";
-			packageProductDependencies = (
-				475ADF2B26CC7A8800A60BBC /* EasyStash */,
-			);
-			productName = "BitcoinWidget (macOS)";
-			productReference = 475ADEDE26CB01F000A60BBC /* BASIO.app */;
-			productType = "com.apple.product-type.application";
-		};
 		47CAC16226D0171300852AF4 /* WidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47CAC16F26D0171400852AF4 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
@@ -323,9 +271,6 @@
 					475ADED726CB01F000A60BBC = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					475ADEDD26CB01F000A60BBC = {
-						CreatedOnToolsVersion = 13.0;
-					};
 					47CAC16226D0171300852AF4 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -348,7 +293,6 @@
 			projectRoot = "";
 			targets = (
 				475ADED726CB01F000A60BBC /* BitcoinWidget (iOS) */,
-				475ADEDD26CB01F000A60BBC /* BitcoinWidget (macOS) */,
 				47CAC16226D0171300852AF4 /* WidgetExtension */,
 			);
 		};
@@ -361,15 +305,6 @@
 			files = (
 				475ADEE326CB01F000A60BBC /* Assets.xcassets in Resources */,
 				475ADEEF26CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		475ADEDC26CB01F000A60BBC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				475ADEE426CB01F000A60BBC /* Assets.xcassets in Resources */,
-				475ADEF026CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,26 +338,6 @@
 				475ADF2126CC58E600A60BBC /* BitcoinPrice.swift in Sources */,
 				475ADF1026CC123900A60BBC /* AppState.swift in Sources */,
 				47D13E6926F8C13000A37C8E /* SettingsView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		475ADEDA26CB01F000A60BBC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				475E291F26D43AD0009A0F37 /* SmallValueView.swift in Sources */,
-				475ADF1126CC123900A60BBC /* AppState.swift in Sources */,
-				475ADF2626CC757200A60BBC /* CKManager.swift in Sources */,
-				475ADF3526CE807900A60BBC /* LightningStats.swift in Sources */,
-				475ADEE226CB01F000A60BBC /* ContentView.swift in Sources */,
-				475E291B26D439DD009A0F37 /* LargeValueView.swift in Sources */,
-				475E291126D051D6009A0F37 /* LCDBackgroundView.swift in Sources */,
-				475E291726D43720009A0F37 /* FourValuePanelView.swift in Sources */,
-				475ADF1626CC142E00A60BBC /* BitcoinStats.swift in Sources */,
-				475ADEE026CB01F000A60BBC /* BitcoinWidgetApp.swift in Sources */,
-				475ADF2226CC58E600A60BBC /* BitcoinPrice.swift in Sources */,
-				475ADF3126CD8E6900A60BBC /* Extensions.swift in Sources */,
-				47D13E6A26F8C13000A37C8E /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +497,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -619,7 +534,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -648,72 +563,6 @@
 			};
 			name = Release;
 		};
-		475ADEEB26CB01F000A60BBC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (macOS).entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = MHMRS5FLW6;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "BitcoinWidget--macOS--Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
-				PRODUCT_NAME = BASIO;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		475ADEEC26CB01F000A60BBC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = "BitcoinWidget (macOS).entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = MHMRS5FLW6;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "BitcoinWidget--macOS--Info.plist";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
-				PRODUCT_NAME = BASIO;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		47CAC17026D0171400852AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -721,7 +570,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
@@ -751,7 +600,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = MHMRS5FLW6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widget/Info.plist;
@@ -796,15 +645,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		475ADEEA26CB01F000A60BBC /* Build configuration list for PBXNativeTarget "BitcoinWidget (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				475ADEEB26CB01F000A60BBC /* Debug */,
-				475ADEEC26CB01F000A60BBC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		47CAC16F26D0171400852AF4 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -829,11 +669,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		475ADF2926CC7A2000A60BBC /* EasyStash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 475ADF2826CC7A2000A60BBC /* XCRemoteSwiftPackageReference "EasyStash" */;
-			productName = EasyStash;
-		};
-		475ADF2B26CC7A8800A60BBC /* EasyStash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 475ADF2826CC7A2000A60BBC /* XCRemoteSwiftPackageReference "EasyStash" */;
 			productName = EasyStash;
