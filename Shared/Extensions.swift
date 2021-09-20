@@ -89,10 +89,16 @@ extension Text {
 
 extension UIDevice {
     static var isIPad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad
+        UIDevice.current.userInterfaceIdiom == .pad && !isInWidget()
     }
     
     static var isIPhone: Bool {
         UIDevice.current.userInterfaceIdiom == .phone
     }
+}
+
+func isInWidget() -> Bool {
+    guard let extesion = Bundle.main.infoDictionary?["NSExtension"] as? [String: String] else { return false }
+    guard let widget = extesion["NSExtensionPointIdentifier"] else { return false }
+    return widget == "com.apple.widgetkit-extension"
 }

@@ -7,7 +7,9 @@
 
 import Foundation
 import CloudKit
+#if os(iOS)
 import UIKit
+#endif
 import SwiftUI
 
 class CKManager {
@@ -188,6 +190,7 @@ class CKManager {
     }
     
     // MARK: - AppDelegate Handlers
+    #if os(iOS)
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
 
         if let notification = CKNotification(fromRemoteNotificationDictionary: userInfo) {
@@ -226,5 +229,6 @@ class CKManager {
         return .noData
 
     }
+    #endif
     
 }
