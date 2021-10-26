@@ -30,6 +30,10 @@ struct BitcoinWidgetApp: App {
                         windowScene.sizeRestrictions?.minimumSize = CGSize(width: 480, height: 800)
                         windowScene.sizeRestrictions?.maximumSize = CGSize(width: 480, height: 800)
                         //windowScene.keyWindow?.standardWindowButton(.zoomButton)?.isEnabled = false
+                        if let titlebar = windowScene.titlebar {
+                            titlebar.titleVisibility = .hidden
+                            titlebar.toolbar = nil
+                        }
                     }
                   #endif
                 }
