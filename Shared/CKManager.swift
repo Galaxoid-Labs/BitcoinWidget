@@ -7,7 +7,7 @@
 
 import Foundation
 import CloudKit
-#if os(iOS)
+#if os(iOS) || os(tvOS)
 import UIKit
 #endif
 import SwiftUI
@@ -190,7 +190,7 @@ class CKManager {
     }
     
     // MARK: - AppDelegate Handlers
-    #if os(iOS)
+    #if os(iOS) || os(tvOS)
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) async -> UIBackgroundFetchResult {
 
         if let notification = CKNotification(fromRemoteNotificationDictionary: userInfo) {

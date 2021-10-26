@@ -15,11 +15,11 @@ struct LargeValueView: View {
     var body: some View {
         VStack(spacing: 8) {
             Text(value)
-                .font(Font.custom("Digital-7Mono", size: UIDevice.isIPad ? 96 : 60))
+                .font(Font.custom("Digital-7Mono", size: (UIDevice.isIPad || UIDevice.isTVOS) ? 96 : 60))
                 .foregroundColor(.black)
                 .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
             Text(LocalizedStringKey(label))
-                .font(Font.custom("Digital-7Mono", size: UIDevice.isIPad ? 24 : 12))
+                .font(Font.custom("Digital-7Mono", size: (UIDevice.isIPad || UIDevice.isTVOS) ? 24 : 12))
                 .tracking(1)
                 .foregroundColor(.black)
                 .shadow(color: Color.gray, radius: 1, x: 0, y: 3)

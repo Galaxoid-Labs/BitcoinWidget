@@ -26,12 +26,16 @@ struct ContentView: View {
                     VStack(spacing: 8) {
                         
                         MainHeaderView()
+                        #if os(iOS)
                             .padding(.bottom, 16)
                             .onTapGesture {
                                 settingsViewPresented.toggle()
                             }
+                        #endif // CHECK
                         
+                        #if os(iOS)
                         Spacer()
+                        #endif
                         
                         HeaderView(color: .blue, title: "CURRENT MARKET",
                                    systemImageName: "chart.xyaxis.line",
@@ -120,7 +124,7 @@ struct MainHeaderView: View {
                 
                 Text("BASIO")
                     .foregroundColor(.white)
-                    .font(.system(size: UIDevice.isIPad ? 42 : 32))
+                    .font(.system(size: (UIDevice.isIPad || UIDevice.isTVOS) ? 42 : 32))
                     .fontWeight(.black)
                 Spacer()
                 
@@ -132,7 +136,7 @@ struct MainHeaderView: View {
                             string[range].foregroundColor = .gray
                         }
                     }
-                    .font(.system(size: UIDevice.isIPad ? 24 : 17))
+                    .font(.system(size: (UIDevice.isIPad || UIDevice.isTVOS) ? 24 : 17))
                     .fontWeight(.heavy)
                     .padding(.trailing, 4)
 
@@ -140,7 +144,7 @@ struct MainHeaderView: View {
                         Image(systemName: "arrowtriangle.right.fill")
                             .foregroundColor(.orange)
                     }
-                    .font(.system(size: UIDevice.isIPad ? 22 : 15))
+                    .font(.system(size: (UIDevice.isIPad || UIDevice.isTVOS) ? 22 : 15))
                     
                 }
                 
@@ -166,18 +170,18 @@ struct HeaderView: View {
             
             Rectangle()
                 .fill(color)
-                .frame(height: UIDevice.isIPad ? 3 : 3)
+                .frame(height: (UIDevice.isIPad || UIDevice.isTVOS) ? 3 : 3)
             
             HStack {
                 Image(systemName: systemImageName)
                     .foregroundColor(systemImageColor)
                     .scaleEffect(CGSize(width: 1.0, height: verticallyFlipImage ? -1.0 : 1.0))
-                    .font(.system(size: UIDevice.isIPad ? 24 : 18))
+                    .font(.system(size: (UIDevice.isIPad || UIDevice.isTVOS) ? 24 : 18))
                 
                 Spacer()
                 Text(title)
                     .foregroundColor(.brown)
-                    .font(.system(size: UIDevice.isIPad ? 19 : 12))
+                    .font(.system(size: (UIDevice.isIPad || UIDevice.isTVOS) ? 19 : 12))
                     .fontWeight(.bold)
             }
             

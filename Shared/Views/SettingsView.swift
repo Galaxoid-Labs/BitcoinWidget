@@ -54,7 +54,9 @@ struct SettingsView: View {
             }
             .preferredColorScheme(.dark)
             .navigationTitle("Settings")
+            #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
+            #endif
             .navigationViewStyle(.stack)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

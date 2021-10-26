@@ -29,6 +29,25 @@
 		475E291C26D439DD009A0F37 /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
 		475E291E26D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
 		475E292026D43AD0009A0F37 /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
+		47BD0E4E27286D4700383BFD /* TVOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD0E4D27286D4700383BFD /* TVOSApp.swift */; };
+		47BD0E5227286D4800383BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD0E5127286D4800383BFD /* Assets.xcassets */; };
+		47BD0E5527286D4800383BFD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47BD0E5427286D4800383BFD /* Preview Assets.xcassets */; };
+		47BD0E5B27286D7C00383BFD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47BD0E5A27286D7C00383BFD /* CloudKit.framework */; };
+		47BD0E5E27286D9200383BFD /* EasyStash in Frameworks */ = {isa = PBXBuildFile; productRef = 47BD0E5D27286D9200383BFD /* EasyStash */; };
+		47BD0E5F27286E6100383BFD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF0F26CC123900A60BBC /* AppState.swift */; };
+		47BD0E6027286E6400383BFD /* CKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2426CC757200A60BBC /* CKManager.swift */; };
+		47BD0E6127286E6700383BFD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2F26CD8E6900A60BBC /* Extensions.swift */; };
+		47BD0E6227286F0500383BFD /* LCDBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E290F26D051D6009A0F37 /* LCDBackgroundView.swift */; };
+		47BD0E6327286F0800383BFD /* FourValuePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291526D43720009A0F37 /* FourValuePanelView.swift */; };
+		47BD0E6427286F0D00383BFD /* SmallValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291D26D43AD0009A0F37 /* SmallValueView.swift */; };
+		47BD0E6527286F0D00383BFD /* LargeValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475E291926D439DD009A0F37 /* LargeValueView.swift */; };
+		47BD0E6627286F1200383BFD /* BitcoinStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF1426CC142E00A60BBC /* BitcoinStats.swift */; };
+		47BD0E6727286F1200383BFD /* LightningStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF3326CE807900A60BBC /* LightningStats.swift */; };
+		47BD0E6827286F1200383BFD /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADF2026CC58E600A60BBC /* BitcoinPrice.swift */; };
+		47BD0E6927286F1700383BFD /* Digital7Mono-B1g5.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 475ADEEE26CB021800A60BBC /* Digital7Mono-B1g5.ttf */; };
+		47BD0E6A27286FD700383BFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475ADED226CB01EE00A60BBC /* ContentView.swift */; };
+		47BD0E6B27286FF000383BFD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D13E6826F8C13000A37C8E /* SettingsView.swift */; };
+		47BD0E6C2728707300383BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475ADED326CB01F000A60BBC /* Assets.xcassets */; };
 		47CAC16426D0171300852AF4 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEF926CB028B00A60BBC /* WidgetKit.framework */; platformFilter = maccatalyst; };
 		47CAC16526D0171300852AF4 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475ADEFB26CB028B00A60BBC /* SwiftUI.framework */; platformFilter = maccatalyst; };
 		47CAC16826D0171300852AF4 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CAC16726D0171300852AF4 /* Widget.swift */; };
@@ -93,6 +112,13 @@
 		475E291526D43720009A0F37 /* FourValuePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourValuePanelView.swift; sourceTree = "<group>"; };
 		475E291926D439DD009A0F37 /* LargeValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueView.swift; sourceTree = "<group>"; };
 		475E291D26D43AD0009A0F37 /* SmallValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallValueView.swift; sourceTree = "<group>"; };
+		47BD0E4B27286D4700383BFD /* BASIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BD0E4D27286D4700383BFD /* TVOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVOSApp.swift; sourceTree = "<group>"; };
+		47BD0E5127286D4800383BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47BD0E5427286D4800383BFD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		47BD0E5927286D7000383BFD /* TVOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TVOS.entitlements; sourceTree = "<group>"; };
+		47BD0E5A27286D7C00383BFD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS15.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		47BD0E5C27286D8200383BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		47CAC16326D0171300852AF4 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CAC16726D0171300852AF4 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		47CAC16926D0171400852AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +133,15 @@
 			files = (
 				475ADF2A26CC7A2000A60BBC /* EasyStash in Frameworks */,
 				475ADF1A26CC1D7B00A60BBC /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47BD0E4827286D4700383BFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BD0E5E27286D9200383BFD /* EasyStash in Frameworks */,
+				47BD0E5B27286D7C00383BFD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +167,7 @@
 				475ADEF126CB023F00A60BBC /* BitcoinWidget--iOS--Info.plist */,
 				475ADED026CB01EE00A60BBC /* Shared */,
 				47CAC16626D0171300852AF4 /* Widget */,
+				47BD0E4C27286D4700383BFD /* TVOS */,
 				475ADEF826CB028B00A60BBC /* Frameworks */,
 				475ADED926CB01F000A60BBC /* Products */,
 			);
@@ -157,6 +193,7 @@
 			children = (
 				475ADED826CB01F000A60BBC /* BASIO.app */,
 				47CAC16326D0171300852AF4 /* WidgetExtension.appex */,
+				47BD0E4B27286D4700383BFD /* BASIO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,6 +209,7 @@
 		475ADEF826CB028B00A60BBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				47BD0E5A27286D7C00383BFD /* CloudKit.framework */,
 				475ADF1C26CC1DE000A60BBC /* CloudKit.framework */,
 				475ADF1926CC1D7B00A60BBC /* CloudKit.framework */,
 				475ADEF926CB028B00A60BBC /* WidgetKit.framework */,
@@ -201,6 +239,26 @@
 				475ADF3326CE807900A60BBC /* LightningStats.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		47BD0E4C27286D4700383BFD /* TVOS */ = {
+			isa = PBXGroup;
+			children = (
+				47BD0E5C27286D8200383BFD /* Info.plist */,
+				47BD0E5927286D7000383BFD /* TVOS.entitlements */,
+				47BD0E4D27286D4700383BFD /* TVOSApp.swift */,
+				47BD0E5127286D4800383BFD /* Assets.xcassets */,
+				47BD0E5327286D4800383BFD /* Preview Content */,
+			);
+			path = TVOS;
+			sourceTree = "<group>";
+		};
+		47BD0E5327286D4800383BFD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				47BD0E5427286D4800383BFD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		47CAC16626D0171300852AF4 /* Widget */ = {
@@ -238,6 +296,26 @@
 			productReference = 475ADED826CB01F000A60BBC /* BASIO.app */;
 			productType = "com.apple.product-type.application";
 		};
+		47BD0E4A27286D4700383BFD /* TVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47BD0E5827286D4800383BFD /* Build configuration list for PBXNativeTarget "TVOS" */;
+			buildPhases = (
+				47BD0E4727286D4700383BFD /* Sources */,
+				47BD0E4827286D4700383BFD /* Frameworks */,
+				47BD0E4927286D4700383BFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVOS;
+			packageProductDependencies = (
+				47BD0E5D27286D9200383BFD /* EasyStash */,
+			);
+			productName = TVOS;
+			productReference = 47BD0E4B27286D4700383BFD /* BASIO.app */;
+			productType = "com.apple.product-type.application";
+		};
 		47CAC16226D0171300852AF4 /* WidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47CAC16F26D0171400852AF4 /* Build configuration list for PBXNativeTarget "WidgetExtension" */;
@@ -265,11 +343,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					475ADED726CB01F000A60BBC = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					47BD0E4A27286D4700383BFD = {
+						CreatedOnToolsVersion = 13.1;
 					};
 					47CAC16226D0171300852AF4 = {
 						CreatedOnToolsVersion = 13.0;
@@ -294,6 +375,7 @@
 			targets = (
 				475ADED726CB01F000A60BBC /* BitcoinWidget (iOS) */,
 				47CAC16226D0171300852AF4 /* WidgetExtension */,
+				47BD0E4A27286D4700383BFD /* TVOS */,
 			);
 		};
 /* End PBXProject section */
@@ -305,6 +387,17 @@
 			files = (
 				475ADEE326CB01F000A60BBC /* Assets.xcassets in Resources */,
 				475ADEEF26CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47BD0E4927286D4700383BFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BD0E5527286D4800383BFD /* Preview Assets.xcassets in Resources */,
+				47BD0E6927286F1700383BFD /* Digital7Mono-B1g5.ttf in Resources */,
+				47BD0E6C2728707300383BFD /* Assets.xcassets in Resources */,
+				47BD0E5227286D4800383BFD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +431,26 @@
 				475ADF2126CC58E600A60BBC /* BitcoinPrice.swift in Sources */,
 				475ADF1026CC123900A60BBC /* AppState.swift in Sources */,
 				47D13E6926F8C13000A37C8E /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47BD0E4727286D4700383BFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47BD0E6427286F0D00383BFD /* SmallValueView.swift in Sources */,
+				47BD0E6127286E6700383BFD /* Extensions.swift in Sources */,
+				47BD0E6A27286FD700383BFD /* ContentView.swift in Sources */,
+				47BD0E6527286F0D00383BFD /* LargeValueView.swift in Sources */,
+				47BD0E5F27286E6100383BFD /* AppState.swift in Sources */,
+				47BD0E6827286F1200383BFD /* BitcoinPrice.swift in Sources */,
+				47BD0E6727286F1200383BFD /* LightningStats.swift in Sources */,
+				47BD0E6327286F0800383BFD /* FourValuePanelView.swift in Sources */,
+				47BD0E4E27286D4700383BFD /* TVOSApp.swift in Sources */,
+				47BD0E6227286F0500383BFD /* LCDBackgroundView.swift in Sources */,
+				47BD0E6627286F1200383BFD /* BitcoinStats.swift in Sources */,
+				47BD0E6027286E6400383BFD /* CKManager.swift in Sources */,
+				47BD0E6B27286FF000383BFD /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BASIO;
 				SDKROOT = iphoneos;
@@ -554,7 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
 				PRODUCT_NAME = BASIO;
 				SDKROOT = iphoneos;
@@ -562,6 +675,67 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47BD0E5627286D4800383BFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TVOS/TVOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVOS/Preview Content\"";
+				DEVELOPMENT_TEAM = MHMRS5FLW6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TVOS/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
+				PRODUCT_NAME = BASIO;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		47BD0E5727286D4800383BFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TVOS/TVOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVOS/Preview Content\"";
+				DEVELOPMENT_TEAM = MHMRS5FLW6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TVOS/Info.plist;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget;
+				PRODUCT_NAME = BASIO;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -584,7 +758,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -614,7 +788,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galaxoidlabs.BitcoinWidget.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -648,6 +822,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		47BD0E5827286D4800383BFD /* Build configuration list for PBXNativeTarget "TVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BD0E5627286D4800383BFD /* Debug */,
+				47BD0E5727286D4800383BFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		47CAC16F26D0171400852AF4 /* Build configuration list for PBXNativeTarget "WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -672,6 +855,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		475ADF2926CC7A2000A60BBC /* EasyStash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 475ADF2826CC7A2000A60BBC /* XCRemoteSwiftPackageReference "EasyStash" */;
+			productName = EasyStash;
+		};
+		47BD0E5D27286D9200383BFD /* EasyStash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 475ADF2826CC7A2000A60BBC /* XCRemoteSwiftPackageReference "EasyStash" */;
 			productName = EasyStash;

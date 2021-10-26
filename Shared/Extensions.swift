@@ -89,7 +89,11 @@ extension Text {
 
 extension UIDevice {
     static var isIPad: Bool {
-        UIDevice.current.userInterfaceIdiom == .pad && !isInWidget()
+        return UIDevice.current.userInterfaceIdiom == .pad && !isInWidget()
+    }
+    
+    static var isTVOS: Bool {
+        return UIDevice.current.systemName == "tvOS"
     }
     
     static var isIPhone: Bool {

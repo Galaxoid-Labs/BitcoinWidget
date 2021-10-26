@@ -15,12 +15,12 @@ struct SmallValueView: View {
     var body: some View {
         VStack(spacing: 4) {
             Text(value)
-                .font(Font.custom("Digital-7Mono", size: UIDevice.isIPad ? 48 : 22))
+                .font(Font.custom("Digital-7Mono", size: (UIDevice.isIPad || UIDevice.isTVOS) ? 48 : 22))
                 .tracking(1)
                 .foregroundColor(.black)
                 .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
             Text(label.uppercased())
-                .font(Font.custom("Digital-7Mono", size: UIDevice.isIPad ? 24 : 12))
+                .font(Font.custom("Digital-7Mono", size: (UIDevice.isIPad || UIDevice.isTVOS) ? 24 : 12))
                 .tracking(1)
                 .foregroundColor(.black)
                 .shadow(color: Color.gray, radius: 1, x: 0, y: 3)
