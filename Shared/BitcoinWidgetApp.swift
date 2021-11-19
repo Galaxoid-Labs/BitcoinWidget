@@ -23,25 +23,12 @@ struct BitcoinWidgetApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(appState)
-                .onReceive(NotificationCenter.default.publisher(for: UIScene.willConnectNotification)) { _ in
-                  #if targetEnvironment(macCatalyst)
-                  // prevent window in macOS from being resized down
-                    UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.forEach { windowScene in
-                        windowScene.sizeRestrictions?.minimumSize = CGSize(width: 480, height: 800)
-                        windowScene.sizeRestrictions?.maximumSize = CGSize(width: 480, height: 800)
-                        //windowScene.keyWindow?.standardWindowButton(.zoomButton)?.isEnabled = false
-                        if let titlebar = windowScene.titlebar {
-                            titlebar.titleVisibility = .hidden
-                            titlebar.toolbar = nil
-                        }
-                    }
-                  #endif
-                }
         }
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .inactive {
                 print("Inactive")
             } else if newPhase == .active {
+                setupCatalyst()
                 appState.loadAll()
                 Task {
                     await CKManager.shared.fetchData()
@@ -54,6 +41,21 @@ struct BitcoinWidgetApp: App {
                 print("Background")
             }
         }
+    }
+    
+    func setupCatalyst() {
+        #if targetEnvironment(macCatalyst)
+        // prevent window in macOS from being resized down
+          UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.forEach { windowScene in
+              windowScene.sizeRestrictions?.minimumSize = CGSize(width: 480, height: 800)
+              windowScene.sizeRestrictions?.maximumSize = CGSize(width: 480, height: 800)
+              //windowScene.keyWindow?.standardWindowButton(.zoomButton)?.isEnabled = false
+              if let titlebar = windowScene.titlebar {
+                  titlebar.titleVisibility = .hidden
+                  titlebar.toolbar = nil
+              }
+          }
+        #endif
     }
 }
 

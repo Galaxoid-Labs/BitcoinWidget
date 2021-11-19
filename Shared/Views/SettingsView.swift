@@ -21,31 +21,31 @@ struct SettingsView: View {
                 Form {
                     
                     Section("API Sources") {
-                        HStack {
+                        HStack(spacing: 16) {
                             Image("blockchain.com-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                            Text("[blockchain.com](https://www.blockchain.com/api)")
+                                .frame(width: UIDevice.isTVOS ? 40 : 20, height: UIDevice.isTVOS ? 40 : 20)
+                            Text("[https://blockchain.com](https://www.blockchain.com/api)")
                         }
                         
-                        HStack {
+                        HStack(spacing: 16) {
                             Image("coingecko-logo")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                            Text("[coingecko.com](https://www.coingecko.com/en/api)")
+                                .frame(width: UIDevice.isTVOS ? 40 : 20, height: UIDevice.isTVOS ? 40 : 20)
+                            Text("[https://coingecko.com](https://www.coingecko.com/en/api)")
                         }
                     }
                     
                     Section("Support & Suggestions") {
-                        HStack {
+                        HStack(spacing: 16) {
                             Image(systemName: "envelope.fill")
                             Text("[basio@galaxoidlabs.com](mailto:basio@galaxoidlabs.com)")
                         }
-                        HStack {
+                        HStack(spacing: 16) {
                             Image(systemName: "network")
-                            Text("[galaxoidlabs.com/basio](https://galaxoidlabs.com/basio)")
+                            Text("[https://galaxoidlabs.com/basio](https://galaxoidlabs.com/basio)")
                         }
                     }
 
