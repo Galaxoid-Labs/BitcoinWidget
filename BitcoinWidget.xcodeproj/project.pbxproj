@@ -66,6 +66,8 @@
 		47DE3DCD27299A3800A2679B /* MediumValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE3DCC27299A3800A2679B /* MediumValueView.swift */; };
 		47DE3DCE27299A3800A2679B /* MediumValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE3DCC27299A3800A2679B /* MediumValueView.swift */; };
 		47DE3DCF27299A3800A2679B /* MediumValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE3DCC27299A3800A2679B /* MediumValueView.swift */; };
+		47E0F573299FE72800EE1323 /* s1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E0F571299FE72800EE1323 /* s1.png */; };
+		47E0F574299FE72800EE1323 /* s2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47E0F572299FE72800EE1323 /* s2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,8 @@
 		47CAC16B26D0171400852AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D13E6826F8C13000A37C8E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		47DE3DCC27299A3800A2679B /* MediumValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumValueView.swift; sourceTree = "<group>"; };
+		47E0F571299FE72800EE1323 /* s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s1.png; sourceTree = "<group>"; };
+		47E0F572299FE72800EE1323 /* s2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		475ADECB26CB01EE00A60BBC = {
 			isa = PBXGroup;
 			children = (
+				47E0F570299FE68000EE1323 /* Screenshots */,
 				475E290D26D04584009A0F37 /* WidgetExtension.entitlements */,
 				475ADF1826CC1D5B00A60BBC /* BitcoinWidget (iOS).entitlements */,
 				475ADEF126CB023F00A60BBC /* BitcoinWidget--iOS--Info.plist */,
@@ -274,6 +279,15 @@
 				47CAC16B26D0171400852AF4 /* Info.plist */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		47E0F570299FE68000EE1323 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				47E0F572299FE72800EE1323 /* s2.png */,
+				47E0F571299FE72800EE1323 /* s1.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,7 +404,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E0F574299FE72800EE1323 /* s2.png in Resources */,
 				475ADEE326CB01F000A60BBC /* Assets.xcassets in Resources */,
+				47E0F573299FE72800EE1323 /* s1.png in Resources */,
 				475ADEEF26CB021800A60BBC /* Digital7Mono-B1g5.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
